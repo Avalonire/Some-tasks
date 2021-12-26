@@ -4,23 +4,31 @@
 
 # date = input('введите дату в формате dd.mm.yyyy: ')
 date = '02.11.2013'
-date = date.split('.')
+d, m, y = date.split('.')
 
-# print(date)
-# result = []
-# item = result[0]
-# if int(item) == 1:
-#     result.append('первое')
-# elif int(item) == 2:
-#     result.append('второе')
-# elif int(item) == 3:
-#     result.append('третье')
-# elif int(item) == 4:
-#     result.append('четвертое')
-#     if int(month) == 1:
-#         result.append('января')
-#     elif int(month) == 2:
-#         result.append('февраля')
-# result.append(date[2])
-#
-# print(str(result), 'года')
+# верное решение со словарем:
+
+months = {
+    '01': 'января',
+    '02': 'февраля',
+    '03': 'марта',
+    '04': 'апреля',
+    '05': 'мая',
+    '06': 'июня',
+    '07': 'июля',
+    '08': 'августа',
+    '09': 'сентября',
+    '10': 'октября',
+    '11': 'ноября',
+    '12': 'декабря'
+}
+
+days = {
+    '01': 'первое',
+    '02': 'второе',
+    '03': 'третье' # и т.д., нужно 31 раз
+}
+
+result = f'{days[d]} {months[m]} {y} года.'
+print(result)
+
