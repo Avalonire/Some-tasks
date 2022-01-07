@@ -37,16 +37,16 @@ if 10 > int(lvl) > 1:
 print(f'Имя: {name}, Здоровье: {health}, Урон: {damage}, Защита: {armor}')
 
 player = {name: name, health: health, damage: damage, armor: armor}
-goblin = {name: 'Goblin', health: 40, damage: 30, armor: 0}
+goblin = {name: 'Goblin', health: 80, damage: 30, armor: 0}
 orc = {name: 'Orc', health: 100, damage: 40, armor: 1.3}
 
 
 def attack(attacker, defender):
     def dmg_reduce(dmg, armor):
-        if defender[armor] != 0:
-            return dmg / armor
-        else:
+        if armor == 0:
             return dmg
+        else:
+            return dmg / armor
 
     damage_final = dmg_reduce(attacker[damage], defender[armor])
     defender[health] -= round(damage_final)
