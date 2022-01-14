@@ -5,6 +5,7 @@ def num_translate_adv(i_name):
     else:
         print(numbers.get(i_name))
 
+
 numbers = {'zero': 'ноль',
            'one': 'один',
            'two': 'два',
