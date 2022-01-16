@@ -17,4 +17,11 @@ def thesaurus_adv(*args):
     return result_adv
 
 
-print(thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева"))
+final_dict = thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
+
+final_dict_sort = {}
+for item in sorted(final_dict):
+    final_dict_sort.update({item: final_dict[item]})
+
+print(final_dict)
+print(final_dict_sort)
