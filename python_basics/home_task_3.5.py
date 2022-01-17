@@ -11,7 +11,6 @@ def get_jokes(joke_count=1.0, rep_words=None):
     Limits:
     unique jokes are limited by the length of local sequences;
     local sequences must be equal length;
-
     """
     nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
     adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
