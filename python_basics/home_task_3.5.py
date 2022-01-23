@@ -17,7 +17,7 @@ def get_jokes(joke_count=1.0, rep_words=None):
     """Return list with random generated jokes from local sequences INSIDE function.
 
     Keyword arguments:
-    joke_count -- count jokes at result list (default 1.0)
+    joke_count -- count jokes at tutors_gen list (default 1.0)
     rep_words -- optional, unique words (default None)
 
     Limits:
