@@ -9,13 +9,7 @@ def seq_len_equal(long, short):
 
 tutors_gen = ((tutors[i], klasses[i]) for i in seq_len_equal(tutors, klasses))
 
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
-print(next(tutors_gen))
+print(type(tutors_gen))
+for ind in range(len(tutors)):
+    print(next(tutors_gen))
+print(dict(tutors_gen))
