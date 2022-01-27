@@ -1,5 +1,5 @@
 ip_dict = {}
-with open('nginx_logs.txt', 'r+', encoding='utf-8') as log_file:
+with open('nginx_logs.txt', 'r', encoding='utf-8') as log_file:
     for line in log_file:
         ip_num = line.strip().split()[0]
         if ip_num not in ip_dict:
