@@ -1,11 +1,11 @@
-from sys import getsizeof
-
+ip_dict = {}
 with open('nginx_logs.txt', 'r+', encoding='utf-8') as log_file:
-    ip_set = list()
     for line in log_file:
-        line_1 = log_file.readline().strip()
-        ip_set.append(line_1.split(' ')[0])
-    for i in range(len(ip_set)):
-        if ip_set.count(i) >
-    print(ip_set)
-    print(getsizeof(ip_set))
+        ip_num = line.strip().split()[0]
+        if ip_num not in ip_dict:
+            ip_dict[ip_num] = 1
+        else:
+            ip_dict[ip_num] += 1
+spam_count = max(ip_dict.values())
+inv_ip_dict = {value: key for key, value in ip_dict.items()}
+print(f'Spam IP {inv_ip_dict[spam_count]}, GET count: {spam_count}')
