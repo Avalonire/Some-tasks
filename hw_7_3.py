@@ -14,4 +14,3 @@ for root, dirs, files in os.walk(ROOT_DIR):
                 src_dir = os.path.join(root, _dir)
                 dst_dir = os.path.join(TMPL_DIR, _dir)
                 shutil.copytree(src_dir, dst_dir)
-               
