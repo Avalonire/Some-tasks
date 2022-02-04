@@ -24,6 +24,10 @@ class Car:
 
 
 class TownCar(Car):
+    def __init__(self, speed, color, name, is_police=False):
+        super().__init__(speed, color, is_police)
+        self.name = f'Town car {name}'
+
     def show_speed(self):
         if self.speed >= 60:
             print(f'{self.name} speed {self.speed}')
@@ -33,6 +37,10 @@ class TownCar(Car):
 
 
 class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police=False):
+        super().__init__(speed, color, is_police)
+        self.name = f'Work car {name}'
+
     def show_speed(self):
         if self.speed >= 40:
             print(f'{self.name} speed {self.speed}')
@@ -43,12 +51,14 @@ class WorkCar(Car):
 
 class SportCar(Car):
     def __init__(self, speed, color, name, is_police=False):
-        super().__init__(speed, color, name, is_police)
+        super().__init__(speed, color, is_police)
+        self.name = f'Sport car {name}'
 
 
 class PoliceCar(Car):
     def __init__(self, speed, color, name):
         super().__init__(speed, color, name)
+        self.name = f'Police car {name}'
         self.is_police = True
 
 
