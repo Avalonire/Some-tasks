@@ -25,7 +25,7 @@ class Car:
 
 class TownCar(Car):
     def __init__(self, speed, color, name, is_police=False):
-        super().__init__(speed, color, is_police)
+        super().__init__(speed, color, name, is_police)
         self.name = f'Town car {name}'
 
     def show_speed(self):
@@ -38,7 +38,7 @@ class TownCar(Car):
 
 class WorkCar(Car):
     def __init__(self, speed, color, name, is_police=False):
-        super().__init__(speed, color, is_police)
+        super().__init__(speed, color, name, is_police)
         self.name = f'Work car {name}'
 
     def show_speed(self):
@@ -51,7 +51,7 @@ class WorkCar(Car):
 
 class SportCar(Car):
     def __init__(self, speed, color, name, is_police=False):
-        super().__init__(speed, color, is_police)
+        super().__init__(speed, color, name, is_police)
         self.name = f'Sport car {name}'
 
 
@@ -71,6 +71,7 @@ josh_car.show_speed()
 josh_car.turn('right')
 josh_car.turn()
 bill_car.show_speed()
-
+chuck_car.stop()
 print(chuck_car.is_police)
 print(kevin_car.__dict__)
+kevin_car.go()
