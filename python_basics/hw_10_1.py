@@ -1,6 +1,3 @@
-import itertools
-
-
 class Matrix:
     def __init__(self, list_of_list):
         self.matrix = list_of_list
